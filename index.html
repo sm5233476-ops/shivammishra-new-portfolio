@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shivam Mishra | Web Developer</title>
+  <meta name="description" content="Portfolio of Shivam Mishra, a freelance web developer building fast, animated websites and AI chat assistants for local businesses and online stores.">
+
+  <!-- Inline Fail-Safe: Ensures content is never trapped if JS fails or hangs -->
+  <script>
+    document.documentElement.classList.add('has-js');
+    setTimeout(function() {
+      if (!window.__motionReady) {
+        document.documentElement.classList.remove('has-js');
+        var preloader = document.getElementById('opening-screen');
+        if (preloader) {
+          preloader.style.display = 'none';
+          preloader.remove();
+        }
+        document.body.classList.remove('is-locked');
+      }
+    }, 3000);
+  </script>
+
+  <!-- Google Fonts: Instrument Serif, Inter, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#work" class="skip-link">Skip to main content</a>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Opening Full-Screen Preloader -->
+  <aside id="opening-screen" aria-label="Introduction Screen">
+    <div class="opening-top">
+      <span>Shivam Mishra</span>
+      <span>Edition 2026</span>
+    </div>
+    <div class="opening-center">
+      <h1 class="opening-title">Portfolio</h1>
+      <span class="opening-year">2026</span>
+    </div>
+    <div class="opening-bottom">
+      <span id="opening-counter" aria-live="polite">000</span>
+      <button type="button" id="opening-skip" class="opening-skip-btn" aria-label="Skip introduction animation">Skip [ESC]</button>
+    </div>
+  </aside>
+
+  <!-- Global Navigation Header -->
+  <header id="site-nav">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand" aria-label="Shivam Mishra Home">Shivam Mishra</a>
+
+      <nav class="nav-desktop-links" aria-label="Main Navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="#" data-contact="whatsapp" class="nav-cta-pill" aria-label="Chat on WhatsApp">Let's talk</a>
+
+      <button type="button" id="mobile-menu-trigger" class="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-menu-dialog" aria-label="Open mobile menu">
+        Menu
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Full-Screen Menu Modal (100dvh) -->
+  <div id="mobile-menu-dialog" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile Navigation">
+    <div class="mobile-menu-header">
+      <span class="nav-brand">Shivam Mishra</span>
+      <button type="button" id="mobile-menu-close" class="mobile-menu-close" aria-label="Close navigation menu">Close</button>
+    </div>
+
+    <nav class="mobile-menu-nav">
+      <a href="#work" class="mobile-nav-link">Work</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+      <a href="#" data-contact="whatsapp" class="nav-cta-pill" style="justify-content: center;">Let's talk on WhatsApp</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-headline">
+      <div class="container">
+        <div class="hero-meta reveal-element">
+          <span class="hero-tag">Web developer, India</span>
+          <span class="hero-availability">
+            <span class="hero-indicator-dot" aria-hidden="true"></span>
+            Available for new projects
+          </span>
+        </div>
+
+        <div class="hero-title-container">
+          <h1 id="hero-headline" class="hero-headline">Websites that bring customers through the <em>door</em>.</h1>
+        </div>
+
+        <p class="hero-subtext reveal-element">
+          I'm Shivam Mishra. I design and build fast, animated websites and AI assistants for local businesses and online stores.
+        </p>
+
+        <div class="hero-actions reveal-element">
+          <a href="#work" class="hero-link-primary">See the work &darr;</a>
+          <a href="#" data-contact="whatsapp" class="hero-link-whatsapp">WhatsApp &nearr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="work" class="work-section" aria-labelledby="work-heading">
+      <div class="container">
+        <p id="work-heading" class="section-label reveal-element">Selected work (03)</p>
+
+        <div class="work-list">
+          <!-- Project 01: Lumina Dental Studio -->
+          <article class="work-item">
+            <div class="work-meta-row">
+              <div class="work-header-left">
+                <div class="work-index-title">
+                  <span class="work-number">01</span>
+                  <h2 class="work-title">Lumina Dental Studio</h2>
+                  <span class="work-badge">Concept project</span>
+                </div>
+                <p class="work-description">Modern dental clinic website designed for patient trust and direct conversions.</p>
+                <div class="work-tags" aria-label="Key features">
+                  <span class="work-tag">Booking flow</span>
+                  <span class="work-tag">Financing calculator</span>
+                  <span class="work-tag">Before/after slider</span>
+                </div>
+              </div>
+              <div class="work-action">
+                <a href="https://lumina-dental-studio-iota.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-link-btn" aria-label="View live site for Lumina Dental Studio">
+                  <span>View live site</span>
+                  <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work-media">
+              <img src="dental.jpg" alt="Lumina Dental Studio web design screenshot showcasing clean clinic services and booking" class="work-img" width="1400" height="875" loading="lazy" onerror="this.onerror=null; this.style.display='none';">
+            </div>
+          </article>
+
+          <!-- Project 02: Ironcrest Roofing & Restoration -->
+          <article class="work-item">
+            <div class="work-meta-row">
+              <div class="work-header-left">
+                <div class="work-index-title">
+                  <span class="work-number">02</span>
+                  <h2 class="work-title">Ironcrest Roofing &amp; Restoration</h2>
+                  <span class="work-badge">Concept project</span>
+                </div>
+                <p class="work-description">Commercial and residential roofing platform built to capture qualified inbound inspection leads.</p>
+                <div class="work-tags" aria-label="Key features">
+                  <span class="work-tag">Instant estimate calculator</span>
+                  <span class="work-tag">Inspection booking</span>
+                  <span class="work-tag">Project sliders</span>
+                </div>
+              </div>
+              <div class="work-action">
+                <a href="https://roofing-portfolio-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-link-btn" aria-label="View live site for Ironcrest Roofing">
+                  <span>View live site</span>
+                  <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work-media">
+              <img src="roofing.jpg" alt="Ironcrest Roofing and Restoration website showcase highlighting estimator tools" class="work-img" width="1400" height="875" loading="lazy" onerror="this.onerror=null; this.style.display='none';">
+            </div>
+          </article>
+
+          <!-- Project 03: Cinder & Cedar Coffee Roasters -->
+          <article class="work-item">
+            <div class="work-meta-row">
+              <div class="work-header-left">
+                <div class="work-index-title">
+                  <span class="work-number">03</span>
+                  <h2 class="work-title">Cinder &amp; Cedar Coffee Roasters</h2>
+                  <span class="work-badge">Concept project</span>
+                </div>
+                <p class="work-description">Direct-to-consumer artisanal coffee eCommerce store with rapid bag selection and subscriptions.</p>
+                <div class="work-tags" aria-label="Key features">
+                  <span class="work-tag">Product search</span>
+                  <span class="work-tag">Cart drawer</span>
+                  <span class="work-tag">Demo checkout &amp; subscriptions</span>
+                </div>
+              </div>
+              <div class="work-action">
+                <a href="https://cinder-cedar-coffee-roasters.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-link-btn" aria-label="View live site for Cinder and Cedar Coffee Roasters">
+                  <span>View live site</span>
+                  <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work-media">
+              <img src="coffee.jpg" alt="Cinder and Cedar Coffee Roasters eCommerce layout showing coffee blends and cart interface" class="work-img" width="1400" height="875" loading="lazy" onerror="this.onerror=null; this.style.display='none';">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Statement Section -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="container">
+        <p id="about-heading" class="section-label reveal-element">About</p>
+        <p class="about-statement reveal-element">
+          I'm Shivam, a web developer from India. I build fast, animated websites and AI chat assistants for small businesses. The three projects above are concept builds that show what I can make for your industry.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section" aria-labelledby="services-heading">
+      <div class="container">
+        <p id="services-heading" class="section-label reveal-element">Services</p>
+
+        <div class="services-list">
+          <div class="service-row reveal-element">
+            <span class="service-number">01</span>
+            <h3 class="service-title">Business websites</h3>
+            <p class="service-desc">Custom responsive websites designed to present your company clearly and turn visits into customer calls.</p>
+          </div>
+
+          <div class="service-row reveal-element">
+            <span class="service-number">02</span>
+            <h3 class="service-title">Online stores</h3>
+            <p class="service-desc">Clean eCommerce storefronts with fast loading catalogs, friction-free checkout, and inventory integrations.</p>
+          </div>
+
+          <div class="service-row reveal-element">
+            <span class="service-number">03</span>
+            <h3 class="service-title">Booking and quote tools</h3>
+            <p class="service-desc">Interactive calculators and calendar appointment schedulers that save hours of manual estimate preparation.</p>
+          </div>
+
+          <div class="service-row reveal-element">
+            <span class="service-number">04</span>
+            <h3 class="service-title">AI chat assistants</h3>
+            <p class="service-desc">Custom automated chat agents trained on your business data to respond to inquiries and capture leads 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="contact-headline reveal-element">Let's build something.</h2>
+
+        <div class="contact-links-grid reveal-element">
+          <a href="#" data-contact="whatsapp" class="contact-link-card" aria-label="Send message on WhatsApp">
+            <div class="contact-card-label">
+              <span>WhatsApp</span>
+              <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+            </div>
+            <span class="contact-card-value">+91 98994 52192</span>
+          </a>
+
+          <a href="#" data-contact="email" class="contact-link-card" aria-label="Send an email to Shivam Mishra">
+            <div class="contact-card-label">
+              <span>Email</span>
+              <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+            </div>
+            <span class="contact-card-value">8hivammishra8@gmail.com</span>
+          </a>
+
+          <a href="#" data-contact="phone" class="contact-link-card" aria-label="Call Shivam Mishra">
+            <div class="contact-card-label">
+              <span>Phone</span>
+              <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+            </div>
+            <span class="contact-card-value">91+ 9899452192</span>
+          </a>
+
+          <a href="#" data-contact="instagram" class="contact-link-card" aria-label="View Instagram profile">
+            <div class="contact-card-label">
+              <span>Instagram</span>
+              <span class="arrow-icon" aria-hidden="true">&nearr;</span>
+            </div>
+            <span class="contact-card-value">@shivam.0nyx</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Shivam Mishra</span>
+      <span>Projects shown are concept builds for fictional businesses.</span>
+    </div>
+  </footer>
+
+  <!-- External Vendor Libraries (cdnjs only) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Project Script -->
+  <script src="script.js"></script>
+</body>
+</html>
